@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisas - Projeto CIPÓ</title>
+    <link rel="stylesheet" href="pesquisas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container dropdown">
+                <a href="index.html">
+                    <img src="https://cipo-bkp.s3.sa-east-1.amazonaws.com/cipo/imagens/logo+cipo.jpg" alt="CIPÓ Logo">
+                    <span class="dropbtn">Projeto CIPÓ</span>
+                </a>
+                <div class="dropdown-content">
+                    <a href="admin.html">Admin</a>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <label for="searchInput" class="sr-only">Buscar pesquisas</label>
+                <input type="text" id="searchInput" placeholder="Digite um comando de áudio ou pesquise">
+                <button id="searchButton" aria-label="Pesquisar" onclick="handleSearch()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <button class="menu-toggle" aria-label="Abrir Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#cipo-news">CIPÓ News</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Extensão</a>
+                    <div class="dropdown-content">
+                        <a href="projetos.html">Projetos</a>
+                        <a href="cursos.html">Cursos</a>
+                        <a href="eventos.html">Eventos</a>
+                        <a href="palestras.html">Palestras</a>
+                    </div>
+                </li>
+                <li><a href="pesquisas.html">Pesquisas</a></li>
+                <li><a href="livros.html">Livros</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="research-hero">
+            <h1>Nossas Pesquisas</h1>
+            <p>Explorando novos horizontes para um futuro sustentável na Amazônia</p>
+        </section>
+
+        <section class="research-content">
+            <div id="researchList" class="research-grid">
+                <!-- Os itens de pesquisa serão adicionados aqui via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Projeto CIPÓ. Todos os direitos reservados.</p>
+    </footer>
+    
+    <!-- Plugin de acessibilidade VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- Scripts -->
+    <script>
+        // Função global para síntese de voz
+        function speakText(text) {
+            if ("speechSynthesis" in window) {
+                window.speechSynthesis.cancel(); // Cancela qualquer fala em andamento
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = "pt-BR";
+                utterance.rate = 0.9;
+                utterance.pitch = 1.1;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        // Função global para manipular a pesquisa
+        function handleSearch() {
+            const searchInput = document.getElementById("searchInput");
+            const searchTerm = searchInput.value.toLowerCase().trim();
+    
+            const audioDescriptions = JSON.parse(localStorage.getItem("audioDescriptions") || "{}");
+            if (audioDescriptions[searchTerm]) {
+                speakText(audioDescriptions[searchTerm].description);
+            } else if (searchTerm === "pesquisas1") {
+                speakText("Bem-vindo à página de Pesquisas do Projeto CIPÓ. Aqui você encontrará informações sobre nossas pesquisas em andamento, planejadas e concluídas.");
+            } else {
+                // Aqui você pode adicionar lógica para pesquisar as pesquisas
+                console.log("Pesquisando por:", searchTerm);
+                // Implementar a lógica de pesquisa real aqui
+            }
+        }
+
+        // Event listeners quando a página carregar
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("Página carregada! Iniciando scripts...");
+
+            // Adicionar event listener para o input de pesquisa
+            const searchInput = document.getElementById("searchInput");
+            searchInput.addEventListener("keypress", function(e) {
+                if (e.key === "Enter") {
+                    handleSearch();
+                }
+            });
+
+            // Verificar se o script existe antes de carregá-lo
+            if (typeof loadResearchEntries === "function") {
+                loadResearchEntries();
+            } else {
+                console.error("Erro: Função loadResearchEntries não foi carregada corretamente.");
+            }
+        });
+    </script>
+    <script src="pesquisas.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo - Projeto CIPÓ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="https://cipo-bkp.s3.sa-east-1.amazonaws.com/cipo/imagens/logo+cipo.jpg" alt="CIPÓ Logo">
+                <span>Projeto CIPÓ</span>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-menu">
+                <button id="homeBtn" class="nav-item"><i class="fas fa-home"></i>Home</button>
+                <button id="aboutBtn" class="nav-item"><i class="fas fa-info-circle"></i>Sobre Nós</button>
+                <button id="newsBtn" class="nav-item"><i class="fas fa-newspaper"></i>CIPÓ News</button>
+                <button id="projectsBtn" class="nav-item"><i class="fas fa-project-diagram"></i>Projetos</button>
+                <button id="researchBtn" class="nav-item"><i class="fas fa-flask"></i>Pesquisas</button>
+                <button id="coursesBtn" class="nav-item"><i class="fas fa-graduation-cap"></i>Cursos</button>
+                <button id="eventsBtn" class="nav-item"><i class="fas fa-calendar-alt"></i>Eventos</button>
+                <button id="lecturesBtn" class="nav-item"><i class="fas fa-chalkboard-teacher"></i>Palestras</button>
+                <button id="booksBtn" class="nav-item"><i class="fas fa-book"></i>Livros</button>
+                <button id="contactBtn" class="nav-item"><i class="fas fa-envelope"></i>Contatos</button>
+                <button id="audioDescriptionsBtn" class="nav-item"><i class="fas fa-volume-up"></i>Audiodescrições</button>
+                <button id="backToSiteBtn" class="nav-item"><i class="fas fa-arrow-left"></i>Voltar para o Site</button>
+                <button id="logoutBtn" class="nav-item logout"><i class="fas fa-sign-out-alt"></i>Logout</button>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <section id="hero">
+                <!-- O conteúdo do hero será adicionado dinamicamente pelo JavaScript -->
+            </section>
+
+            <div class="curved-pattern"></div>
+            <header class="content-header">
+                <div class="header-content">
+                    <h1>Painel Administrativo</h1>
+                    <div class="breadcrumb">
+                        <span>Você está em: </span>
+                        <span id="currentSection">Home</span>
+                    </div>
+                </div>
+            </header>
+
+            <div id="contentArea" class="content-area">
+                <!-- O conteúdo será carregado dinamicamente aqui -->
+            </div>
+
+            <section id="audioDescriptionsSection" class="audio-description-section" style="display: none;">
+                <h2>Gerenciar Audiodescrições</h2>
+                
+                <form id="audioDescriptionForm" class="form-section">
+                    <div class="input-group">
+                        <label for="commandName">Nome do Comando</label>
+                        <input 
+                            type="text" 
+                            id="commandName" 
+                            name="commandName" 
+                            required 
+                            placeholder="Ex: ouvir1, ouvir2, etc"
+                        >
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="description">Audiodescrição</label>
+                        <textarea 
+                            id="description" 
+                            name="description" 
+                            required 
+                            placeholder="Digite a audiodescrição que será falada quando este comando for acionado"
+                        ></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Salvar Audiodescrição</button>
+                </form>
+            
+                <div id="audioDescriptionsList" class="items-grid">
+                    <!-- As audiodescrições serão carregadas aqui -->
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <div id="messageBox"></div>
+    <script src="index.js"></script>
+    <script src="github-hub.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
+

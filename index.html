@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto CIPÓ</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container dropdown">
+                <a href="index.html" aria-label="Página Inicial do Projeto CIPÓ">
+                    <img src="https://cipo-bkp.s3.sa-east-1.amazonaws.com/cipo/imagens/logo+cipo.jpg" alt="Logo do Projeto CIPÓ">
+                    <span class="dropbtn">Projeto CIPÓ</span>
+                </a>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Abrir Menu de Navegação">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="search-container">
+                <label for="searchInput" class="sr-only">Pesquisar ou ativar audiodescrição</label>
+                <input type="text" id="searchInput" placeholder="Digite um comando para audiodescrição" aria-describedby="searchDescription">
+                <button id="searchButton" aria-label="Pesquisar ou Ativar Comando de Voz" onclick="handleSearch()">
+                  <i class="fas fa-search"></i>
+                </button>
+                <span id="searchDescription" class="sr-only">Digite o comando de voz</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#cipo-news">CIPÓ News</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">Extensão</a>
+                    <div class="dropdown-content">
+                        <a href="projetos.html">Projetos</a>
+                        <a href="cursos.html">Cursos</a>
+                        <a href="eventos.html">Eventos</a>
+                        <a href="palestras.html">Palestras</a>
+                    </div>
+                </li>
+                <li><a href="pesquisas.html">Pesquisas</a></li>
+                <li><a href="livros.html">Livros</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" aria-label="Seção de Destaque">
+            <div class="hero-content">
+                <h1>Bem-vindos ao CIPÓ</h1>
+                <p>LABORATÓRIO INTERDISCIPLINAR DE EMPREENDEDORISMO, INOVAÇÃO E INCLUSÃO DAS AMAZÔNIAS</p>
+            </div>
+            <div id="heroCarousel" class="carousel" aria-label="Carrossel de Imagens">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://cipo-bkp.s3.sa-east-1.amazonaws.com/cipo/imagens/membros16.jpg" alt="Evento de lançamento do livro com membros do projeto CIPÓ">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://cipo-bkp.s3.sa-east-1.amazonaws.com/cipo/imagens/livro_super_16_9.jpg" alt="Capa do livro 'Superlimpo e Crespinha' do projeto CIPÓ">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://cipo-bkp.s3.sa-east-1.amazonaws.com/cipo/imagens/imagem_redimensionada_16_9.jpg" alt="Evento do projeto CIPÓ com participantes reunidos">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-slide="prev" aria-label="Imagem Anterior">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-slide="next" aria-label="Próxima Imagem">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </button>
+                <ol class="carousel-indicators">
+                    <li data-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></li>
+                    <li data-slide-to="1" aria-label="Slide 2"></li>
+                    <li data-slide-to="2" aria-label="Slide 3"></li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="cipo-news" aria-labelledby="cipo-news-title">
+            <h2 id="cipo-news-title">CIPÓ News</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <img src="https://cipo-bkp.s3.sa-east-1.amazonaws.com/cipo/imagens/lan%C3%A7amento1.jpg" alt="Evento de lançamento do livro 'Superlimpo Crespinha'">
+                    <div class="news-content">
+                        <h3>Lançamento do Livro</h3>
+                        <p>Evento de lançamento do livro "Superlimpo Crespinha".</p>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <img src="https://cipo-bkp.s3.sa-east-1.amazonaws.com/cipo/imagens/palestra1.jpg" alt="Palestrantes e participantes do I Seminário de Usabilidade na UFRA">
+                    <div class="news-content">
+                        <h3>Tudo que ocorreu na palestra</h3>
+                        <p>Resumo do I Seminário de Usabilidade na UFRA.</p>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <img src="https://cipo-bkp.s3.sa-east-1.amazonaws.com/cipo/imagens/amazonidas.jpg?height=200&width=300" alt="Ilustração representando a diversidade da Amazônia">
+                    <div class="news-content">
+                        <h3>Dia das Amazônias</h3>
+                        <p>Celebrando o Dia das Amazônias em 5 de setembro.</p>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <img src="https://cipo-bkp.s3.sa-east-1.amazonaws.com/cipo/imagens/arvoresday.jpg?height=300&width=400" alt="Ilustração de uma árvore com a mensagem 'Proteger a natureza é cuidar do futuro'">
+                    <div class="news-content">
+                        <h3>Dia da Árvore</h3>
+                        <p>Preservar a Natureza é um dever de todos.</p>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <img src="https://cipo-bkp.s3.sa-east-1.amazonaws.com/cipo/imagens/autismoday.jpg?height=400&width=200" alt="Ilustração sobre conscientização do autismo">
+                    <div class="news-content">
+                        <h3>Dia do Autismo</h3>
+                        <p>Venha celebrar esta data importante.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Projeto CIPÓ. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+</body>
+</html>
+

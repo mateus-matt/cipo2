@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palestras - Projeto CIPÓ</title>
+    <link rel="stylesheet" href="palestras.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container dropdown">
+                <a href="index.html">
+                    <img src="https://cipo-bkp.s3.sa-east-1.amazonaws.com/cipo/imagens/logo+cipo.jpg" alt="CIPÓ Logo">
+                    <span class="dropbtn">Projeto CIPÓ</span>
+                </a>
+                <div class="dropdown-content">
+                    <a href="admin.html">Admin</a>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Digite 'ouvir1' para audiodescrição">
+                <button id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#cipo-news">CIPÓ News</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Extensão</a>
+                    <div class="dropdown-content">
+                        <a href="projetos.html">Projetos</a>
+                        <a href="cursos.html">Cursos</a>
+                        <a href="eventos.html">Eventos</a>
+                        <a href="palestras.html">Palestras</a>
+                    </div>
+                </li>
+                <li><a href="pesquisas.html">Pesquisas</a></li>
+                <li><a href="livros.html">Livros</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="lectures-hero">
+            <h1>Nossas Palestras</h1>
+            <p>Conhecimento e inspiração para transformar a Amazônia</p>
+        </section>
+
+        <section class="lectures-grid">
+            <div class="lecture-card">
+                <h2>Inovação Social na Amazônia</h2>
+                <p>Data: 15 de Agosto, 2024</p>
+                <p>Palestrante: Dra. Maria Silva</p>
+                <p>Explore as mais recentes inovações sociais que estão transformando comunidades na Amazônia.</p>
+            </div>
+            <div class="lecture-card">
+                <h2>Tecnologias Sustentáveis para o Futuro</h2>
+                <p>Data: 22 de Setembro, 2024</p>
+                <p>Palestrante: Dr. João Santos</p>
+                <p>Descubra como as tecnologias sustentáveis estão moldando o futuro da região amazônica.</p>
+            </div>
+            <div class="lecture-card">
+                <h2>Educação Inclusiva: Desafios e Oportunidades</h2>
+                <p>Data: 10 de Outubro, 2024</p>
+                <p>Palestrante: Profa. Ana Rodrigues</p>
+                <p>Uma análise profunda dos desafios e oportunidades na implementação de educação inclusiva na Amazônia.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Projeto CIPÓ. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="palestras.js"></script>
+</body>
+</html>
+

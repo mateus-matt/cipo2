@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Projeto CIPÓ</title>
+    <link rel="stylesheet" href="projetos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container dropdown">
+                <a href="index.html">
+                    <img src="https://cipo-bkp.s3.sa-east-1.amazonaws.com/cipo/imagens/logo+cipo.jpg" alt="CIPÓ Logo">
+                    <span class="dropbtn">Projeto CIPÓ</span>
+                </a>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Digite 'ouvir1' para audiodescrição">
+                <button id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#cipo-news">CIPÓ News</a></li>
+                    <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Extensão</a>
+                        <div class="dropdown-content">
+                            <a href="projetos.html">Projetos</a>
+                            <a href="cursos.html">Cursos</a>
+                            <a href="eventos.html">Eventos</a>
+                            <a href="palestras.html">Palestras</a>
+                        </div>
+                    </li>
+                    <li><a href="pesquisas.html">Pesquisas</a></li>
+                    <li><a href="livros.html">Livros</a></li>
+                    <li><a href="contato.html">Contatos</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#cipo-news">CIPÓ News</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Extensão</a>
+                    <div class="dropdown-content">
+                        <a href="projetos.html">Projetos</a>
+                        <a href="cursos.html">Cursos</a>
+                        <a href="eventos.html">Eventos</a>
+                        <a href="palestras.html">Palestras</a>
+                    </div>
+                </li>
+                <li><a href="pesquisas.html">Pesquisas</a></li>
+                <li><a href="livros.html">Livros</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+               <li><a href="admin.html">Admin</a></li> 
+                </div>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="projects-hero">
+            <h1>Nossos Projetos</h1>
+            <p>Explorando novos horizontes para um futuro sustentável na Amazônia</p>
+        </section>
+        
+        <section class="projects-section">
+            <div class="projects-grid">
+                <!-- Os cards de projeto serão inseridos aqui dinamicamente pelo JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Projeto CIPÓ. Todos os direitos reservados.</p>
+    </footer>
+    
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="projetos.js"></script>
+</body>
+</html>
+

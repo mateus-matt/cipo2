@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Projeto CIPÓ</title>
+    <link rel="stylesheet" href="eventos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container dropdown">
+                <a href="index.html">
+                    <img src="https://cipo-bkp.s3.sa-east-1.amazonaws.com/cipo/imagens/logo+cipo.jpg" alt="CIPÓ Logo">
+                    <span class="dropbtn">Projeto CIPÓ</span>
+                </a>
+                <div class="dropdown-content">
+                    <a href="admin.html">Admin</a>
+                </div>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Digite 'ouvir1' para audiodescrição">
+                <button id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#cipo-news">CIPÓ News</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Extensão</a>
+                    <div class="dropdown-content">
+                        <a href="projetos.html">Projetos</a>
+                        <a href="cursos.html">Cursos</a>
+                        <a href="eventos.html">Eventos</a>
+                        <a href="palestras.html">Palestras</a>
+                    </div>
+                </li>
+                <li><a href="pesquisas.html">Pesquisas</a></li>
+                <li><a href="livros.html">Livros</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="events-hero">
+            <h1>Nossos Eventos</h1>
+            <p>Participe e faça a diferença na Amazônia</p>
+        </section>
+
+        <section class="events-grid">
+            <div class="event-card">
+                <h2>Feira de Inovação Amazônica</h2>
+                <p>Data: 5-7 de Novembro, 2024</p>
+                <p>Local: Centro de Convenções da Amazônia</p>
+                <p>Uma exposição de projetos inovadores desenvolvidos para a região amazônica, com palestras, workshops e networking.</p>
+            </div>
+            <div class="event-card">
+                <h2>Hackathon Sustentabilidade</h2>
+                <p>Data: 20-22 de Janeiro, 2025</p>
+                <p>Local: Universidade Federal do Amazonas</p>
+                <p>Um evento de 48 horas para desenvolver soluções tecnológicas para desafios ambientais da Amazônia.</p>
+            </div>
+            <div class="event-card">
+                <h2>Simpósio de Educação Inclusiva</h2>
+                <p>Data: 15 de Março, 2025</p>
+                <p>Local: Auditório Municipal de Manaus</p>
+                <p>Um dia inteiro dedicado a discussões e apresentações sobre práticas de educação inclusiva na região amazônica.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Projeto CIPÓ. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="eventos.js"></script>
+</body>
+</html>
+

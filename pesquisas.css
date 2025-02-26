@@ -1,0 +1,771 @@
+/* Estilos base */
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #FAFAE6;
+  }
+
+/* Header e Navegação */
+header {
+    background-color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo-container a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo-container span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #DEB887;
+}
+
+/* 3 Link Styles */
+.admin-link {
+    background-color: #DEB887;
+    color: white !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.admin-link:hover {
+  background-color: #cd853f;
+  color: white !important;
+}
+
+@media (max-width: 768px) {
+  .admin-link {
+    background-color: transparent;
+    color: #333 !important;
+    padding: 12px 16px !important;
+  }
+
+  .admin-link:hover {
+    background-color: #f1f1f1;
+    color: #deb887 !important;
+  }
+}
+
+/* Estilos para o dropdown do logo */
+.logo-container.dropdown {
+  position: relative;
+}
+
+.logo-container .dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 160px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo-container.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.logo-container .dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #eee;
+}
+
+.logo-container .dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.logo-container .dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #deb887;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+  .logo-container .dropdown-content {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    background-color: #f9f9f9;
+  }
+
+  .logo-container .dropdown-content a {
+    padding: 12px 16px;
+    text-align: center;
+  }
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin: 0 2rem;
+    flex: 1;
+    max-width: 300px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #DEB887;
+    border-radius: 4px 0 0 4px;
+    font-size: 0.9rem;
+}
+
+#searchButton {
+    background-color: #DEB887;
+    border: 1px solid #DEB887;
+    border-radius: 0 4px 4px 0;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#searchButton:hover {
+    background-color: #CD853F;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Hero Section */
+.research-hero {
+    background: linear-gradient(135deg, #deb887, #cd853f);
+    color: white;
+    text-align: center;
+    padding: 2rem 2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .research-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    
+  }
+  
+  .research-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+/* Container principal */
+.research-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .research-card {
+    background: white;
+    border: 2px solid #DEB887; /* Borda semelhante à imagem */
+    border-radius: 16px; /* Bordas arredondadas mais suaves */
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.5rem; /* Espaçamento interno para o conteúdo */
+    font-family: Arial, sans-serif; /* Tipografia básica */
+    min-height: 320px;
+    gap: 1;
+    flex-direction: column;
+    display: flex;
+    
+  }
+  .research-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+
+  .research-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .research-card h2 {
+    color: #8B4513; /* Cor semelhante ao texto marrom */
+    font-size: 1.4rem; /* Tamanho do título ajustado */
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    
+  }
+  
+  .research-card .status {
+    font-weight: bold;
+    color: #deb887;
+    margin-bottom: 0.5rem;
+  }
+  
+  .research-card .description {
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .research-card .researcher,
+  .research-card .timeline,
+  .research-card .funding {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+  }
+  
+ 
+/* Áreas de estudo */
+.research-areas {
+    margin-top: 1.5rem;
+  }
+  
+  .research-areas h4 {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .area-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .area-tag {
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+  }
+
+  
+/* Layout responsivo */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    .research-card {
+      padding: 1.25rem;
+    }
+  
+    .research-grid {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
+  }
+
+.research-header {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+/*Estilo do ícone circular marrom*/
+.research-icon {
+    background-color: #8B4513; /* Fundo marrom para o ícone */
+    color: white; /* Cor do ícone */
+    font-size: 1.5rem; /* Tamanho do ícone */
+    width: 40px; /* Reduzido de 50px */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Forma circular */
+    margin-bottom: 1rem; /* Espaçamento abaixo do ícone */
+  }
+  
+  .research-icon i {
+    color: white;
+    transform: scale(1.1);
+    display: inline-flex;
+  }
+
+  .research-title {
+    margin-top: 1rem;
+    color: #8B4513;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 auto;
+  }
+  
+  .researcher-name {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  
+  .research-description {
+    color: #333;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+
+  /* Meta informações */
+  .research-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .timeline,
+  .funding {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .timeline i,
+  .funding i {
+    color: #8b4513;
+    font-size: 1rem;
+  }
+/* Estilos para o diálogo de edição */
+dialog {
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #deb887;
+    max-width: 600px;
+    width: 90%;
+  }
+  
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  dialog .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  dialog label {
+    font-weight: 500;
+    color: #8b4513;
+  }
+  
+  dialog input,
+  dialog textarea,
+  dialog select {
+    padding: 0.5rem;
+    border: 1px solid #deb887;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  dialog button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+  }
+  
+  dialog button[type="submit"] {
+    background-color: #8b4513;
+    color: white;
+  }
+  
+  dialog button[type="submit"]:hover {
+    background-color: #deb887;
+  }
+  
+  dialog button[type="button"] {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  dialog button[type="button"]:hover {
+    background-color: #e0e0e0;
+  }
+
+  /* Botões de ação */
+.research-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .btn-edit,
+  .btn-delete {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+  }
+  
+  .btn-edit {
+    background-color: #8b4513;
+    color: white;
+  }
+  
+  .btn-edit:hover {
+    background-color: #734011;
+  }
+  
+  .btn-delete {
+    background-color: #ff4444;
+    color: white;
+  }
+  
+  .btn-delete:hover {
+    background-color: #cc0000;
+  }
+
+
+/*Estilos dos badges de status*/
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px
+}
+
+.status-badge.ongoing {
+    background-color: #ADD8E6;
+    color: #1a5f7a;
+}
+
+.status-badge.planned {
+    background-color: #FFE4B5;
+    color: #8B4513;
+}
+
+.status-badge.completed {
+    background-color: #98FB98;
+    color: #006400;
+}
+
+.research-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: justify
+  }
+
+.research-content h2 {
+    color: #8B4513;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    justify-content: auto;
+    
+}
+
+.researcher {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.description {
+    color: #444;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.research-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.timeline, .funding {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.timeline i, .funding i {
+    color: #8B4513;
+}
+
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: #e0e0e0;
+    color: #666;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 0.75rem 1rem;
+    text-align: center;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        position: relative;
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+        order: 1;
+    }
+
+    .logo-container img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: none;
+        margin: 15px 0;
+        order: 2;
+    }
+
+    #searchInput {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #DEB887;
+        border-radius: 4px 0 0 4px;
+    }
+
+    #searchButton {
+        padding: 8px 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+        margin: 10px auto;
+        order: 3;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: #333;
+        margin: 5px auto;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu a {
+        padding: 12px 16px;
+        display: block;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background-color: #f9f9f9;
+        padding: 0;
+    }
+
+    .dropdown-content a {
+        padding: 12px 16px;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .dropdown-content a:last-child {
+        border-bottom: none;
+    }
+
+    .research-hero h1 {
+        font-size: 2rem;
+    }
+
+    .research-hero p {
+        font-size: 1rem;
+    }
+
+    .research-grid {
+        grid-template-columns: 1fr;
+      }
+    
+      .research-container {
+        padding: 1rem;
+      }
+}
+
+@media (min-width: 769px) {
+    header {
+        position: fixed;
+        top: 0;
+    }
+
+    body {
+        padding-top: 80px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #ADD8E6;
+    color: rgb(139,69,19);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
